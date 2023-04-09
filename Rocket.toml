@@ -1,0 +1,9 @@
+[default]
+address = "127.0.0.1"
+port = 3000
+ident = "Spacebar"
+ip_header = false
+secret_key = "hPrYyЭRiMyµ5sBB1π+CMæ1køFsåqKvBiQJxBVHQk="
+
+[debug]
+limits = { json = "10MiB" }
