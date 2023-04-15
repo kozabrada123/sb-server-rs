@@ -1,5 +1,10 @@
 use rocket::serde::json::{json, Json, Value};
 use rocket::serde::{Deserialize, Serialize};
+use sea_orm::{DatabaseConnection, Database, EntityTrait, PrimaryKeyTrait};
+
+use schema::users::Entity as User;
+use crate::DB_PATH;
+use crate::schema;
 
 #[derive(Serialize, Deserialize)]
 #[serde(crate = "rocket::serde")]
@@ -33,6 +38,6 @@ pub fn auth_login(body: Json<LoginSchema>) -> &'static str {
 }
 
 #[post("/register", format = "json", data = "<body>")]
-pub fn auth_register(body: Json<RegisterSchema>) -> &'static str {
+pub async fn auth_register(body: Json<RegisterSchema>) -> &'static str {
     "Hello, world!"
 }
