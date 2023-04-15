@@ -10,6 +10,7 @@ pub use super::channels::Entity as Channels;
 pub use super::client_release::Entity as ClientRelease;
 pub use super::config::Entity as Config;
 pub use super::connected_accounts::Entity as ConnectedAccounts;
+pub use super::connection_config::Entity as ConnectionConfig;
 pub use super::embed_cache::Entity as EmbedCache;
 pub use super::emojis::Entity as Emojis;
 pub use super::guilds::Entity as Guilds;

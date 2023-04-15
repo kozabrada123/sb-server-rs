@@ -7,15 +7,20 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
     pub id: String,
+    pub external_id: String,
     pub user_id: Option<String>,
-    pub access_token: String,
     pub friend_sync: bool,
     pub name: String,
     pub revoked: bool,
-    pub show_activity: bool,
+    pub show_activity: i32,
     pub r#type: String,
     pub verified: bool,
     pub visibility: i32,
+    pub integrations: String,
+    pub metadata: Option<String>,
+    pub metadata_visibility: i32,
+    pub two_way_link: bool,
+    pub token_data: Option<String>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

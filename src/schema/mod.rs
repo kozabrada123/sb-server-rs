@@ -12,6 +12,7 @@ pub mod channels;
 pub mod client_release;
 pub mod config;
 pub mod connected_accounts;
+pub mod connection_config;
 pub mod embed_cache;
 pub mod emojis;
 pub mod guilds;

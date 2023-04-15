@@ -12,7 +12,7 @@ pub struct Model {
     pub banner_asset_id: Option<String>,
     pub cover_sticker_id: Option<String>,
     #[sea_orm(column_name = "coverStickerId")]
-    // End me, why are there two of these
+    // Why are there two cover_sticker_ids????
     pub cover_sticker_id_two: Option<String>,
 }
 
